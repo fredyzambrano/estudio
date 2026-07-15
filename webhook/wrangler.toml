@@ -1,0 +1,19 @@
+name            = "despega-webhook"
+main            = "worker.js"
+compatibility_date = "2025-01-01"
+
+# KV namespace — crea uno en el dashboard de Cloudflare y pega el ID aquí
+[[kv_namespaces]]
+binding = "CODES_KV"
+id      = "PEGA_AQUI_TU_KV_NAMESPACE_ID"
+
+# Variables públicas (sin secretos)
+[vars]
+# Dominio desde el que envías emails (debe estar verificado en Resend)
+EMAIL_DOMAIN = "aprendeamonetizar.com"
+
+# Secrets — NO los pongas aquí, usa: npx wrangler secret put NOMBRE
+# MP_ACCESS_TOKEN   → tu Access Token de producción de MercadoPago
+# RESEND_API_KEY    → tu API key de resend.com
+# OWNER_EMAIL       → tu email para recibir alertas
+# WHATSAPP          → tu número sin + (ej: 573001234567)
