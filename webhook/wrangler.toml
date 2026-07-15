@@ -3,12 +3,9 @@ main            = "worker.js"
 compatibility_date = "2025-01-01"
 
 # KV namespace — crea uno en el dashboard de Cloudflare y pega el ID aquí
-[[kv_namespaces]]
-binding = "CODES_KV"
-id      = "kv_namespaces": [{
-                    "binding": "KV_BINDING",
-                    "id": "2def182556e64eda9cf20f5127e10d0d"
-                 }]
+kv_namespaces = [
+  { binding = "CODES_KV", id = "2def182556e64eda9cf20f5127e10d0d" }
+]
 
 # Variables públicas (sin secretos)
 [vars]
