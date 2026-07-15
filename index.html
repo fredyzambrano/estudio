@@ -127,9 +127,15 @@
               <input id="p-age" inputmode="numeric" placeholder="19" />
             </div>
           </div>
-          <div class="field">
-            <label data-i18n="p_occupation"></label>
-            <input id="p-occupation" data-i18n-ph="p_occupation_ph" />
+          <div class="field-row">
+            <div class="field grow">
+              <label data-i18n="p_location"></label>
+              <input id="p-location" data-i18n-ph="p_location_ph" />
+            </div>
+            <div class="field grow">
+              <label data-i18n="p_occupation"></label>
+              <input id="p-occupation" data-i18n-ph="p_occupation_ph" />
+            </div>
           </div>
           <div class="field">
             <label data-i18n="p_pains"></label>
@@ -139,6 +145,11 @@
           <div class="field">
             <label data-i18n="p_wants"></label>
             <textarea id="p-wants" rows="3" data-i18n-ph="p_wants_ph"></textarea>
+          </div>
+          <div class="field">
+            <label data-i18n="p_fears"></label>
+            <textarea id="p-fears" rows="2" data-i18n-ph="p_fears_ph"></textarea>
+            <div class="subhint" data-i18n="p_fears_hint"></div>
           </div>
           <div class="field">
             <label data-i18n="p_platforms"></label>
@@ -239,6 +250,96 @@
           <button class="btn sm success" onclick="Warmup.addJargon()" data-i18n="jargon_add"></button>
           <div id="jargon-list" class="mt-2"></div>
         </div>
+      </div>
+
+      <!-- Banco de inspiración viral + psicología -->
+      <div class="card mt-2">
+        <h3>🎯 <span data-i18n="research_title"></span></h3>
+        <p class="hint" data-i18n="research_sub"></p>
+
+        <details class="accordion" style="margin-bottom:16px">
+          <summary data-i18n="psych_title"></summary>
+          <div class="acc-body">
+            <p class="hint" data-i18n="psych_sub"></p>
+            <div class="method-grid" style="grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px;margin-top:12px">
+              <div class="method-card" style="padding:12px 14px">
+                <div class="mnum" style="font-size:1.4rem">🤝</div>
+                <h4 data-i18n="psych_social"></h4><p data-i18n="psych_social_d"></p>
+              </div>
+              <div class="method-card" style="padding:12px 14px">
+                <div class="mnum" style="font-size:1.4rem">⏳</div>
+                <h4 data-i18n="psych_fomo"></h4><p data-i18n="psych_fomo_d"></p>
+              </div>
+              <div class="method-card" style="padding:12px 14px">
+                <div class="mnum" style="font-size:1.4rem">🤔</div>
+                <h4 data-i18n="psych_curiosity"></h4><p data-i18n="psych_curiosity_d"></p>
+              </div>
+              <div class="method-card" style="padding:12px 14px">
+                <div class="mnum" style="font-size:1.4rem">💎</div>
+                <h4 data-i18n="psych_authentic"></h4><p data-i18n="psych_authentic_d"></p>
+              </div>
+              <div class="method-card" style="padding:12px 14px">
+                <div class="mnum" style="font-size:1.4rem">✨</div>
+                <h4 data-i18n="psych_transform"></h4><p data-i18n="psych_transform_d"></p>
+              </div>
+              <div class="method-card" style="padding:12px 14px">
+                <div class="mnum" style="font-size:1.4rem">🪞</div>
+                <h4 data-i18n="psych_relatable"></h4><p data-i18n="psych_relatable_d"></p>
+              </div>
+            </div>
+          </div>
+        </details>
+
+        <div class="card-row cols-2">
+          <div>
+            <div class="field-row">
+              <div class="field">
+                <label data-i18n="viral_platform"></label>
+                <select id="viral-platform">
+                  <option value="TikTok">TikTok</option>
+                  <option value="Instagram">Instagram</option>
+                  <option value="YouTube Shorts">YouTube Shorts</option>
+                </select>
+              </div>
+              <div class="field grow">
+                <label data-i18n="viral_views"></label>
+                <input id="viral-views-input" type="number" min="0" inputmode="numeric" placeholder="85000" />
+              </div>
+            </div>
+            <div class="field">
+              <label data-i18n="viral_vtitle"></label>
+              <input id="viral-title-input" data-i18n-ph="viral_vtitle_ph" />
+            </div>
+            <div class="field">
+              <label data-i18n="viral_url"></label>
+              <input id="viral-url" type="url" inputmode="url" data-i18n-ph="viral_url_ph" />
+            </div>
+            <div class="field">
+              <label data-i18n="viral_hook"></label>
+              <input id="viral-hook-input" data-i18n-ph="viral_hook_ph" />
+            </div>
+          </div>
+          <div>
+            <div class="field">
+              <label data-i18n="viral_psych"></label>
+              <div class="chips" style="gap:6px;flex-wrap:wrap">
+                <label class="chip"><input type="checkbox" id="vpsych-social" /> <span data-i18n="psych_social"></span></label>
+                <label class="chip"><input type="checkbox" id="vpsych-fomo" /> FOMO</label>
+                <label class="chip"><input type="checkbox" id="vpsych-curiosity" /> <span data-i18n="psych_curiosity"></span></label>
+                <label class="chip"><input type="checkbox" id="vpsych-authentic" /> <span data-i18n="psych_authentic"></span></label>
+                <label class="chip"><input type="checkbox" id="vpsych-transform" /> <span data-i18n="psych_transform"></span></label>
+                <label class="chip"><input type="checkbox" id="vpsych-relatable" /> <span data-i18n="psych_relatable"></span></label>
+              </div>
+            </div>
+            <div class="field">
+              <label data-i18n="viral_why"></label>
+              <textarea id="viral-why" rows="3" data-i18n-ph="viral_why_ph"></textarea>
+            </div>
+            <button class="btn success" onclick="Warmup.addViral()" data-i18n="viral_save"></button>
+          </div>
+        </div>
+
+        <div id="viral-list" class="mt-2"></div>
       </div>
     </section>
 

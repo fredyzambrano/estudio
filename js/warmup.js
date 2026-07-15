@@ -123,11 +123,83 @@ const Warmup = (() => {
       "</tbody></table></div>";
   }
 
+  /* ---- Banco de inspiración viral ---- */
+  const PSYCH_KEYS = ["social", "fomo", "curiosity", "authentic", "transform", "relatable"];
+
+  function addViral() {
+    const val = (id) => { const el = $(id); return el ? el.value.trim() : ""; };
+    const platform = val("viral-platform") || "TikTok";
+    const title = val("viral-title-input");
+    const url = val("viral-url");
+    const views = parseInt(val("viral-views-input")) || 0;
+    const hook = val("viral-hook-input");
+    const psych = PSYCH_KEYS.filter((k) => {
+      const el = document.getElementById("vpsych-" + k);
+      return el && el.checked;
+    });
+    const why = val("viral-why");
+
+    if (!title && !url) { UI.toast(I18N.t("viral_need_title"), "error"); return; }
+
+    if (!Store.state.research) Store.state.research = { viral: [] };
+    Store.state.research.viral.push({ id: Store.uid(), platform, title, url, views, hook, psych, why, date: Store.todayKey() });
+    Store.save();
+
+    if ($("viral-title-input")) $("viral-title-input").value = "";
+    if ($("viral-url")) $("viral-url").value = "";
+    if ($("viral-views-input")) $("viral-views-input").value = "";
+    if ($("viral-hook-input")) $("viral-hook-input").value = "";
+    if ($("viral-why")) $("viral-why").value = "";
+    PSYCH_KEYS.forEach((k) => { const el = document.getElementById("vpsych-" + k); if (el) el.checked = false; });
+
+    UI.toast(I18N.t("toast_saved"), "success");
+    renderViral();
+  }
+
+  function deleteViral(id) {
+    if (!confirm(I18N.t("confirm_delete"))) return;
+    if (Store.state.research) Store.state.research.viral = Store.state.research.viral.filter((v) => v.id !== id);
+    Store.save();
+    renderViral();
+  }
+
+  function renderViral() {
+    const box = $("viral-list");
+    if (!box) return;
+    const videos = (Store.state.research && Store.state.research.viral) || [];
+    if (!videos.length) {
+      box.innerHTML = '<div class="empty"><span class="e-icon">🎥</span>' + UI.esc(I18N.t("viral_empty")) + "</div>";
+      return;
+    }
+    box.innerHTML = [...videos].reverse().map((v) => {
+      const psychChips = v.psych && v.psych.length
+        ? '<div class="chips mt-1" style="gap:4px">' + v.psych.map((p) => '<span class="chip" style="font-size:0.77rem;padding:3px 9px">' + UI.esc(I18N.t("psych_" + p)) + "</span>").join("") + "</div>"
+        : "";
+      return (
+        '<div class="card" style="margin-bottom:8px;padding:12px 14px">' +
+          '<div class="flex between">' +
+            '<div>' +
+              '<strong>' + UI.esc(v.title || v.url || "—") + "</strong> " +
+              '<span class="badge gray">' + UI.esc(v.platform) + "</span>" +
+              (v.views ? ' <span class="muted small">· ' + UI.fmtNum(v.views) + " views</span>" : "") +
+            "</div>" +
+            '<button class="btn sm danger" onclick="Warmup.deleteViral(\'' + v.id + '\')">🗑</button>' +
+          "</div>" +
+          (v.hook ? '<div class="small muted mt-1">🪝 "' + UI.esc(v.hook) + '"</div>' : "") +
+          psychChips +
+          (v.why ? '<div class="small mt-1" style="color:var(--text-2)">💡 ' + UI.esc(v.why) + "</div>" : "") +
+          '<div class="small muted" style="opacity:0.45;margin-top:4px">' + UI.esc(v.date) + "</div>" +
+        "</div>"
+      );
+    }).join("");
+  }
+
   function render() {
     renderTerms();
     renderChecklist();
     renderJargon();
+    renderViral();
   }
 
-  return { render, toggleTask, copyTerm, addTerm, removeTerm, addJargon, removeJargon };
+  return { render, toggleTask, copyTerm, addTerm, removeTerm, addJargon, removeJargon, addViral, deleteViral };
 })();

@@ -25,6 +25,7 @@ const Store = (() => {
     posts: [],                  // {id, ts, platform, format, hook, views, likes, comments, asks, notes}
     ritual: {},                 // 'YYYY-MM-DD' -> {scroll,like,comment,saveshare}
     startedAt: null,            // ISO del primer post registrado
+    research: { viral: [] },    // {id, platform, title, url, views, hook, psych[], why, date}
   });
 
   let state = load();
@@ -48,6 +49,8 @@ const Store = (() => {
     const merged = { ...base, ...s };
     merged.product = { ...base.product, ...(s.product || {}) };
     merged.warmup = { ...base.warmup, ...(s.warmup || {}) };
+    merged.research = { ...base.research, ...(s.research || {}) };
+    if (!Array.isArray(merged.research.viral)) merged.research.viral = [];
     merged.v = SCHEMA_VERSION;
     return merged;
   }

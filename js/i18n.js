@@ -229,6 +229,33 @@ const I18N = (() => {
       leg_refund_b: "Si PRO no es para ti, tienes 7 días desde la activación para pedir reembolso total por WhatsApp, sin preguntas.",
       foot_copy: "Hecho con 🔥 en Colombia · aprendeamonetizar.com",
 
+      /* Persona extras */
+      p_location: "Ciudad / País", p_location_ph: "Ej: Medellín, Colombia",
+      p_fears: "Miedos (uno por línea)", p_fears_ph: "Quedarse atrás académicamente\nDecepcionar a sus padres",
+      p_fears_hint: "Los miedos generan los hooks emocionales más poderosos.",
+
+      /* Banco de inspiración viral */
+      research_title: "Banco de inspiración viral",
+      research_sub: "Antes de crear, estudia lo que ya funciona en tu nicho. Guarda los videos que te llamen la atención, analiza sus disparadores psicológicos y recrea el patrón en tu propio contenido.",
+      viral_platform: "Plataforma", viral_views: "Vistas aprox.",
+      viral_vtitle: "Título o descripción del video", viral_vtitle_ph: "Ej: Chica estudia para parcial con este truco",
+      viral_url: "URL (opcional)", viral_url_ph: "https://tiktok.com/…",
+      viral_hook: "Hook que usó", viral_hook_ph: "Las primeras palabras del video…",
+      viral_psych: "Disparadores psicológicos que usó",
+      viral_why: "¿Por qué crees que funcionó?", viral_why_ph: "Toca un dolor muy real, el hook es visual inmediato…",
+      viral_save: "Añadir al banco", viral_empty: "Aún no tienes videos guardados. Empieza buscando los dolores de tu persona en TikTok y guarda los que más te impacten.",
+      viral_need_title: "Agrega al menos un título o URL al video.",
+
+      /* Psicología del contenido viral */
+      psych_title: "Disparadores psicológicos del contenido viral",
+      psych_sub: "Cada video que revienta el algoritmo usa al menos uno de estos mecanismos. Reconócelos en los videos que guardas y aplícalos en tus guiones.",
+      psych_social: "Prueba social", psych_social_d: "«Millones de personas ya lo usan». La popularidad actúa como señal de calidad que elimina el escepticismo.",
+      psych_fomo: "FOMO", psych_fomo_d: "«Si no sabes esto, te estás perdiendo algo». Crea urgencia sin presión directa de venta.",
+      psych_curiosity: "Curiosidad", psych_curiosity_d: "El hook abre una pregunta que el cerebro necesita resolver. No puedes hacer scroll sin ver la respuesta.",
+      psych_authentic: "Autenticidad", psych_authentic_d: "Gente real, problemas reales, sin libreto. La imperfección es la señal de confianza más poderosa.",
+      psych_transform: "Transformación", psych_transform_d: "Antes y después, explícito o implícito. El cerebro está programado para seguir relatos de cambio hasta el final.",
+      psych_relatable: "Identificación", psych_relatable_d: "«Eso me pasa a mí también». El espectador se ve en el video y comenta para confirmarlo.",
+
       /* Común */
       cancel: "Cancelar", save: "Guardar", close: "Cerrar", delete: "Eliminar",
       confirm_delete: "¿Seguro que quieres eliminarlo?",
@@ -450,6 +477,30 @@ const I18N = (() => {
       leg_refund_b: "If PRO isn't for you, you have 7 days from activation to request a full refund via WhatsApp, no questions asked.",
       foot_copy: "Made with 🔥 in Colombia · aprendeamonetizar.com",
 
+      p_location: "City / Country", p_location_ph: "E.g.: Medellín, Colombia",
+      p_fears: "Fears (one per line)", p_fears_ph: "Falling behind academically\nDisappointing their parents",
+      p_fears_hint: "Fears generate the most powerful emotional hooks.",
+
+      research_title: "Viral inspiration bank",
+      research_sub: "Before creating, study what already works in your niche. Save videos that catch your eye, analyze their psychological triggers, and recreate the pattern in your own content.",
+      viral_platform: "Platform", viral_views: "Approx. views",
+      viral_vtitle: "Video title or description", viral_vtitle_ph: "E.g.: Girl studies for midterm using this trick",
+      viral_url: "URL (optional)", viral_url_ph: "https://tiktok.com/…",
+      viral_hook: "Hook they used", viral_hook_ph: "The opening words of the video…",
+      viral_psych: "Psychological triggers it used",
+      viral_why: "Why do you think it worked?", viral_why_ph: "Hits a very real pain point, hook is immediately visual…",
+      viral_save: "Add to bank", viral_empty: "No videos saved yet. Start by searching your persona's pain points on TikTok and save the ones that hit you hardest.",
+      viral_need_title: "Add at least a title or URL for the video.",
+
+      psych_title: "Psychological triggers of viral content",
+      psych_sub: "Every video that breaks the algorithm uses at least one of these mechanisms. Recognize them in the videos you save and apply them in your scripts.",
+      psych_social: "Social proof", psych_social_d: "'Millions of people already use it.' Popularity removes skepticism and acts as a quality signal.",
+      psych_fomo: "FOMO", psych_fomo_d: "'If you don't know this, you're missing out.' Creates urgency without direct sales pressure.",
+      psych_curiosity: "Curiosity", psych_curiosity_d: "The hook opens a question the brain needs to resolve. You can't scroll past without seeing the answer.",
+      psych_authentic: "Authenticity", psych_authentic_d: "Real people, real problems, no script. Imperfection is the most powerful trust signal.",
+      psych_transform: "Transformation", psych_transform_d: "Before and after, explicit or implied. The brain is wired to follow change narratives to the end.",
+      psych_relatable: "Relatability", psych_relatable_d: "'That happens to me too.' The viewer sees themselves and comments to confirm it.",
+
       cancel: "Cancel", save: "Save", close: "Close", delete: "Delete",
       confirm_delete: "Are you sure you want to delete it?",
       toast_saved: "Saved ✓", toast_deleted: "Deleted",
@@ -669,6 +720,30 @@ const I18N = (() => {
       leg_refund_t: "Reembolsos",
       leg_refund_b: "Se o PRO não for para você, você tem 7 dias a partir da ativação para pedir reembolso total pelo WhatsApp, sem perguntas.",
       foot_copy: "Feito com 🔥 na Colômbia · aprendeamonetizar.com",
+
+      p_location: "Cidade / País", p_location_ph: "Ex.: São Paulo, Brasil",
+      p_fears: "Medos (um por linha)", p_fears_ph: "Ficar para trás academicamente\nDesapontar os pais",
+      p_fears_hint: "Os medos geram os ganchos emocionais mais poderosos.",
+
+      research_title: "Banco de inspiração viral",
+      research_sub: "Antes de criar, estude o que já funciona no seu nicho. Salve os vídeos que mais te impactam, analise seus gatilhos psicológicos e recrie o padrão no seu próprio conteúdo.",
+      viral_platform: "Plataforma", viral_views: "Views aprox.",
+      viral_vtitle: "Título ou descrição do vídeo", viral_vtitle_ph: "Ex.: Menina estuda para prova com esse truque",
+      viral_url: "URL (opcional)", viral_url_ph: "https://tiktok.com/…",
+      viral_hook: "Hook que usou", viral_hook_ph: "As primeiras palavras do vídeo…",
+      viral_psych: "Gatilhos psicológicos que usou",
+      viral_why: "Por que você acha que funcionou?", viral_why_ph: "Atinge uma dor muito real, o hook é imediatamente visual…",
+      viral_save: "Adicionar ao banco", viral_empty: "Nenhum vídeo salvo ainda. Comece pesquisando as dores da sua persona no TikTok e salve os que mais te impactam.",
+      viral_need_title: "Adicione pelo menos um título ou URL do vídeo.",
+
+      psych_title: "Gatilhos psicológicos do conteúdo viral",
+      psych_sub: "Todo vídeo que explode o algoritmo usa pelo menos um desses mecanismos. Reconheça-os nos vídeos que você salva e aplique-os nos seus roteiros.",
+      psych_social: "Prova social", psych_social_d: "'Milhões de pessoas já usam.' A popularidade elimina o ceticismo e age como sinal de qualidade.",
+      psych_fomo: "FOMO", psych_fomo_d: "'Se você não sabe isso, está perdendo algo.' Cria urgência sem pressão direta de venda.",
+      psych_curiosity: "Curiosidade", psych_curiosity_d: "O hook abre uma pergunta que o cérebro precisa resolver. Você não consegue passar sem ver a resposta.",
+      psych_authentic: "Autenticidade", psych_authentic_d: "Pessoas reais, problemas reais, sem roteiro. A imperfeição é o sinal de confiança mais poderoso.",
+      psych_transform: "Transformação", psych_transform_d: "Antes e depois, explícito ou implícito. O cérebro é programado para seguir narrativas de mudança até o fim.",
+      psych_relatable: "Identificação", psych_relatable_d: "'Isso acontece comigo também.' O espectador se reconhece no vídeo e comenta para confirmar.",
 
       cancel: "Cancelar", save: "Salvar", close: "Fechar", delete: "Excluir",
       confirm_delete: "Tem certeza de que quer excluir?",

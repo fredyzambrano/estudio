@@ -17,9 +17,11 @@ const Persona = (() => {
     return {
       name: $("p-name").value.trim(),
       age: $("p-age").value.trim(),
+      location: $("p-location").value.trim(),
       occupation: $("p-occupation").value.trim(),
       pains: linesToArr($("p-pains").value),
       wants: linesToArr($("p-wants").value),
+      fears: linesToArr($("p-fears").value),
       platforms,
       content: $("p-content").value.trim(),
       notes: $("p-notes").value.trim(),
@@ -29,9 +31,11 @@ const Persona = (() => {
   function fillForm(p) {
     $("p-name").value = p ? p.name : "";
     $("p-age").value = p ? p.age : "";
+    $("p-location").value = p ? (p.location || "") : "";
     $("p-occupation").value = p ? p.occupation : "";
     $("p-pains").value = p ? p.pains.join("\n") : "";
     $("p-wants").value = p ? p.wants.join("\n") : "";
+    $("p-fears").value = p ? (p.fears || []).join("\n") : "";
     $("p-content").value = p ? p.content : "";
     $("p-notes").value = p ? p.notes : "";
     document.querySelectorAll("#p-platforms input").forEach((c) => {
@@ -129,8 +133,8 @@ const Persona = (() => {
             '<div><strong>' + UI.esc(p.name) + '</strong>' +
               (p.age ? ' <span class="muted small">· ' + UI.esc(p.age) + '</span>' : "") +
               (active ? ' <span class="badge fire">' + UI.esc(I18N.t("p_active")) + "</span>" : "") +
-              '<div class="muted small">' + UI.esc(p.occupation || "") + "</div>" +
-              '<div class="small mt-1">🔥 ' + p.pains.length + " · ✨ " + p.wants.length + "</div>" +
+              '<div class="muted small">' + UI.esc([p.occupation, p.location].filter(Boolean).join(" · ")) + "</div>" +
+              '<div class="small mt-1">🔥 ' + p.pains.length + " · ✨ " + p.wants.length + (p.fears && p.fears.length ? " · 😨 " + p.fears.length : "") + "</div>" +
             "</div>" +
             '<div class="flex flex-wrap">' +
               (!active ? '<button class="btn sm" onclick="Persona.setActive(\'' + p.id + '\')">' + UI.esc(I18N.t("p_make_active")) + "</button>" : "") +
