@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="es-CO">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="dark light">
+  <title>Rescate Open — Coordinación de excedentes de alimentos</title>
+  <meta name="description" content="Infraestructura abierta para coordinar donaciones de excedentes de alimentos entre donantes y organizaciones receptoras verificadas.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#071410">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥗</text></svg>">
+  <link rel="stylesheet" href="css/rescate.css">
+</head>
+<body>
+  <a class="saltar" href="#principal">Saltar al contenido</a>
+
+  <header class="barra">
+    <div class="barra-inner">
+      <div class="marca">
+        <span class="marca-logo" aria-hidden="true">🥗</span>
+        <span>Rescate Open<small>Piloto Colombia</small></span>
+      </div>
+      <div class="barra-espacio"></div>
+      <button class="btn pequeno fantasma" id="btn-sesion" aria-label="Cambiar de sesión">
+        <span id="sesion-etiqueta">Entrar</span>
+      </button>
+    </div>
+  </header>
+
+  <nav class="nav" id="nav" aria-label="Secciones principales"></nav>
+
+  <main id="principal" class="contenedor" tabindex="-1">
+    <section id="vista-panel" class="vista" aria-labelledby="t-panel"></section>
+    <section id="vista-oportunidades" class="vista" aria-labelledby="t-oportunidades"></section>
+    <section id="vista-publicar" class="vista" aria-labelledby="t-publicar"></section>
+    <section id="vista-operacion" class="vista" aria-labelledby="t-operacion"></section>
+    <section id="vista-verificacion" class="vista" aria-labelledby="t-verificacion"></section>
+    <section id="vista-auditoria" class="vista" aria-labelledby="t-auditoria"></section>
+    <section id="vista-cuenta" class="vista" aria-labelledby="t-cuenta"></section>
+  </main>
+
+  <footer class="pie-legal contenedor">
+    <p>
+      Rescate Open coordina; no vende, transporta ni manipula alimentos.<br>
+      Software libre bajo <a href="../LICENSE">AGPL-3.0-or-later</a> ·
+      <a href="../legal/terminos-de-uso.md">Términos</a> ·
+      <a href="../legal/politica-tratamiento-datos.md">Tratamiento de datos</a> ·
+      <a href="../SECURITY.md">Reporte de vulnerabilidades</a>
+    </p>
+    <p class="tenue">Los textos legales son plantillas editables y no constituyen asesoría jurídica.</p>
+  </footer>
+
+  <div id="toast" role="status" aria-live="polite"></div>
+
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-titulo" aria-hidden="true">
+    <div class="modal-caja">
+      <div class="modal-cabeza">
+        <h3 id="modal-titulo"></h3>
+        <button class="cerrar" id="modal-cerrar" aria-label="Cerrar">&times;</button>
+      </div>
+      <div id="modal-cuerpo"></div>
+    </div>
+  </div>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

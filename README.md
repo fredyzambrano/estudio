@@ -73,3 +73,26 @@ Decisiones deliberadas:
 python3 -m http.server 8080
 # → http://localhost:8080
 ```
+
+---
+
+## Otros proyectos en este repositorio
+
+### `rescate-open/` — Coordinación de excedentes de alimentos
+
+Proyecto independiente, pensado para un subdominio propio (`app.tudominio.co`).
+Infraestructura abierta para coordinar donaciones de excedentes de alimentos entre
+donantes y organizaciones receptoras verificadas, con las reglas del piloto colombiano
+escritas en el código: bloqueo sanitario, máquina de estados con guardas, RBAC de cinco
+roles y auditoría encadenada por hash.
+
+Misma filosofía que Despega —sin build, sin frameworks, se despliega copiando la carpeta—
+pero con el núcleo de reglas separado y cubierto por 111 pruebas que corren en Node.
+
+```bash
+cd rescate-open
+npm test        # 111 pruebas, cero dependencias
+npm run dev     # http://localhost:4173, con las cabeceras de producción
+```
+
+Ver [`rescate-open/README.md`](rescate-open/README.md).

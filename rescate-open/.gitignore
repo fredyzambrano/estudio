@@ -1,0 +1,36 @@
+# Secretos — nunca deben llegar al repositorio
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secretos/
+
+# Datos reales del piloto: si alguna vez existe una exportación,
+# no puede quedar versionada por accidente.
+datos-reales/
+*.backup.json
+exportacion-*.json
+rescate-open-20*.json
+
+# Cloudflare / Wrangler
+.wrangler/
+.dev.vars
+wrangler.toml.local
+
+# Node
+node_modules/
+npm-debug.log*
+.npm/
+
+# Sistema y editores
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# Artefactos de prueba
+capturas/
+cobertura/
+*.log
