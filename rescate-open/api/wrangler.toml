@@ -1,0 +1,25 @@
+name               = "rescate-open-api"
+main               = "worker.js"
+compatibility_date = "2025-01-01"
+
+# Base de datos D1. Crea una y pega el ID:
+#   npx wrangler d1 create rescate-open
+#   npx wrangler d1 execute rescate-open --file=./schema.sql --remote
+[[d1_databases]]
+binding       = "DB"
+database_name = "rescate-open"
+database_id   = "PEGA_AQUI_EL_ID"
+
+# Variables públicas. NUNCA pongas secretos en este archivo: va a Git.
+[vars]
+APP_URL              = "https://app.tudominio.co"
+ORIGENES_PERMITIDOS  = "https://app.tudominio.co"
+
+# Secretos — configúralos con:
+#   npx wrangler secret put NOMBRE
+#
+#   SAL_AUDITORIA   Sal para seudonimizar IPs. Si cambia, los seudónimos
+#                   anteriores dejan de correlacionarse (a veces eso se quiere).
+#   SAL_TOKENS      Sal para el hash de los tokens de sesión.
+#
+# Genera cada una con:  openssl rand -base64 32

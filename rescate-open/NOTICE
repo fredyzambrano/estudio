@@ -1,0 +1,60 @@
+Rescate Open
+Copyright (C) [AÑO] [NOMBRE DE LA ENTIDAD OPERADORA]
+
+Este programa es software libre: puedes redistribuirlo y/o modificarlo bajo
+los términos de la Licencia Pública General Affero de GNU, publicada por la
+Free Software Foundation, en su versión 3 o cualquier versión posterior.
+
+Se distribuye con la esperanza de que sea útil, pero SIN NINGUNA GARANTÍA;
+ni siquiera la garantía implícita de COMERCIABILIDAD o IDONEIDAD PARA UN
+PROPÓSITO PARTICULAR. Consulta la Licencia Pública General Affero de GNU
+para más detalles. Una copia acompaña a este programa en el archivo LICENSE;
+si no, ver <https://www.gnu.org/licenses/>.
+
+--------------------------------------------------------------------------
+MARCAS
+--------------------------------------------------------------------------
+
+El nombre "Rescate Open", su logotipo y su identidad visual NO se licencian
+bajo la AGPL. La licencia cubre el software, no la marca.
+
+Puedes:
+  - usar, modificar y desplegar este software para cualquier fin;
+  - decir que tu proyecto "está basado en Rescate Open".
+
+No puedes, sin autorización escrita:
+  - llamar "Rescate Open" a tu despliegue modificado;
+  - usar el nombre o el logotipo de forma que sugiera afiliación,
+    respaldo o verificación por parte de la entidad operadora.
+
+La razón es concreta: la marca se asocia a un proceso de verificación de
+organizaciones y a criterios sanitarios. Un despliegue que relaje esos
+criterios y conserve el nombre trasladaría a terceros una confianza que no
+le corresponde.
+
+--------------------------------------------------------------------------
+OBLIGACIÓN DE LA AGPL PARA DESPLIEGUES EN RED
+--------------------------------------------------------------------------
+
+Si modificas este software y lo ofreces a través de una red, debes poner el
+código fuente correspondiente a disposición de sus usuarios. Es el motivo
+por el que se eligió AGPL y no otra licencia: cualquier mejora hecha sobre
+una versión desplegada debe poder volver a la comunidad que la necesita.
+
+--------------------------------------------------------------------------
+DEPENDENCIAS DE TERCEROS
+--------------------------------------------------------------------------
+
+Ninguna. El software no incorpora bibliotecas de terceros en tiempo de
+ejecución. Los únicos requisitos externos son un navegador con módulos ES y
+WebCrypto, y Node.js 20 o superior para ejecutar las pruebas.
+
+--------------------------------------------------------------------------
+AVISOS
+--------------------------------------------------------------------------
+
+Los documentos de las carpetas legal/ y docs/ son PLANTILLAS DE TRABAJO sin
+revisión jurídica. No constituyen asesoría legal ni sanitaria.
+
+Los datos incluidos en app/js/datos/semilla.js son ficticios. Ninguna
+organización, dirección, teléfono o persona mencionada existe.

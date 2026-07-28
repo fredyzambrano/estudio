@@ -1,0 +1,17 @@
+{
+  "name": "rescate-open",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Infraestructura abierta para coordinar donaciones de excedentes de alimentos entre donantes y organizaciones receptoras verificadas.",
+  "license": "AGPL-3.0-or-later",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test \"tests/**/*.test.js\"",
+    "test:watch": "node --test --watch \"tests/**/*.test.js\"",
+    "dev": "node herramientas/servidor.js",
+    "verificar": "npm test"
+  }
+}
